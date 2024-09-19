@@ -17,7 +17,7 @@ public class SubirArchivo {
         return getDriver(actor).findElement(By.xpath(xpath));
     }
 
-    public static void uploadFile (Actor actor, String absolutePath, String xpath) {
+    public static void seleccionando (Actor actor, String absolutePath, String xpath) {
         WebDriver driver = getDriver(actor);
         WebElement uploadElement = getUploadByXpath(actor, xpath);
         FileToUpload fileToUpload = new FileToUpload(driver, absolutePath);

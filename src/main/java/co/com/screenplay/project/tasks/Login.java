@@ -24,7 +24,7 @@ public class Login implements Task {
         actor.attemptsTo(WaitUntil.the(APARTADO_LOGIN, isVisible()).forNoMoreThan(TIEMPO_ESPERA).seconds());
         actor.attemptsTo(Enter.theValue(username).into(USER_NAME_INPUT));
         actor.attemptsTo(Enter.theValue(password).into(PASSWORD_INPUT));
-        actor.attemptsTo(ClickeaSobre.on(BOTON_LOGIN));
+        actor.attemptsTo(ClickeaSobre.el(BOTON_LOGIN));
     }
 
     public static Login autenticarse(String user, String password){

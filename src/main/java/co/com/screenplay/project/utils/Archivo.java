@@ -4,9 +4,9 @@ import java.io.File;
 
 public class Archivo {
 
-    private static String pathProject = new File("").getAbsolutePath();
-    public static String getRouteUpload(String nameFile) {
-        String pathResources = pathProject + "/src/test/resources/files/";
+    private static String rutaProyecto= new File("").getAbsolutePath();
+    public static String obtenerRuta(String nameFile) {
+        String pathResources = rutaProyecto + "/src/test/resources/files/";
         return pathResources + nameFile;
     }
 }

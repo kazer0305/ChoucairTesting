@@ -1,5 +1,7 @@
 package co.com.screenplay.project.stepdefinitions;
 
+import co.com.screenplay.project.models.Candidato;
+import co.com.screenplay.project.tasks.Reclutar;
 import io.cucumber.java.Before;
 import io.cucumber.java.an.Y;
 import io.cucumber.java.es.Entonces;
@@ -17,12 +19,16 @@ public class ContratarCandidatoStep {
 
     @Y("se ingresa la informacion personal del candidato")
     public void seIngresaLaInformacionPersonalDelCandidato(){
-        theActorInTheSpotlight().attemptsTo();
+        theActorInTheSpotlight().attemptsTo(
+            Reclutar.unNuevo(new Candidato())
+        );
     }
 
     @Y("este se le agrega la informacion en la seccion notas")
     public void esteSeLeAgregaLaInformacionEnLaSeccionNotas(){
-        theActorInTheSpotlight().attemptsTo();
+        theActorInTheSpotlight().attemptsTo(
+
+        );
     }
 
     @Entonces("el candidato es ingresado en plantilla")

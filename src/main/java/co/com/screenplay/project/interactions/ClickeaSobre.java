@@ -16,7 +16,7 @@ public class ClickeaSobre implements Interaction{
         this.target = target;
     }
 
-    public static ClickeaSobre on(Target target){
+    public static ClickeaSobre el(Target target){
         return new ClickeaSobre(target);
     }
 
