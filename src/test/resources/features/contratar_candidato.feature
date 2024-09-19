@@ -13,9 +13,9 @@ Característica: Contratar un empleado para la plataforma
     Dado "Administrador" abre el sitio web de pruebas
 
   Escenario: Agregar candidato en la plataforma de nomina
-    Cuando se ingresa la información personal del candidato
-    Y este se le agrega la información en la sección notas
-    Y se valida el ingreso exitoso
-    Entonces el candidato es contratado
+    Cuando Accede al sitio web usando sus credenciales
+    Y se ingresa la informacion personal del candidato
+    Y este se le agrega la informacion en la seccion notas
+    Entonces el candidato es ingresado en plantilla
 
 
