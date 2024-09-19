@@ -1,5 +1,6 @@
 package co.com.screenplay.project.stepdefinitions;
 
+import co.com.screenplay.project.tasks.Login;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,14 +11,13 @@ import net.serenitybdd.screenplay.questions.page.TheWebPage;
 import org.hamcrest.Matchers;
 
 import static co.com.screenplay.project.utils.Constantes.*;
-import static co.com.screenplay.project.utils.Constantes.WEBSITE_NAME;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class IngresarUsuarioStep{
 
-    private String userName;
+    private String username;
     private String password;
 
     @Before
@@ -27,10 +27,10 @@ public class IngresarUsuarioStep{
 
     @When("Accede al sitio web usando sus credenciales")
     public void accedeAlSitioWebUsandoSusCredenciales(){
-        userName = "admin";
-        password = "admin1234";
+        username = NOMBRE_USUARIO;
+        password = PASSWORD_USUARIO;
         theActorCalled(ACTOR).attemptsTo(
-
+            Login.autenticarse(username, password)
         );
     }
 
@@ -39,7 +39,7 @@ public class IngresarUsuarioStep{
         theActorInTheSpotlight().should(
             GivenWhenThen.seeThat(
                 TheWebPage.title(),
-                Matchers.containsString(WEBSITE_NAME)
+                Matchers.containsString(ORANGE_TITLE)
             )
         );
     }

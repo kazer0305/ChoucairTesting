@@ -2,6 +2,7 @@ package co.com.screenplay.project.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
@@ -24,7 +25,7 @@ public class ClickeaSobre implements Interaction{
         actor.attemptsTo(
             WaitUntil.the(target, isClickable()).forNoMoreThan(15).seconds(),
             WaitUntil.the(target, isVisible()).forNoMoreThan(15).seconds(),
-            ClickeaSobre.on(target)
+            Click.on(target)
         );
     }
 
