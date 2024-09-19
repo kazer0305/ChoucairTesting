@@ -6,7 +6,7 @@ public class Archivo {
 
     private static String pathProject = new File("").getAbsolutePath();
     public static String getRouteUpload(String nameFile) {
-        String pathResources = pathProject + "/src/test/resources/file/";
+        String pathResources = pathProject + "/src/test/resources/files/";
         return pathResources + nameFile;
     }
 }

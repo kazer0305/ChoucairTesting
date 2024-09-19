@@ -3,18 +3,24 @@ package co.com.screenplay.project.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class Agendamiento {
-    public static final Target TITULO =Target.the("Titulo entrevista")
-        .locatedBy("//label[normalize-space()='Interview Title']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//input");
-    public static final Target ENTREVISTADOR = Target.the("input entrevistador")
-        .locatedBy("//input[@include-employees='onlyCurrent']");
-    public static final Target ENTREVISTADOR_SLC = Target.the("selccionar entrevistador")
-        .locatedBy("(//div[@role='listbox']//span)[1]");
-    public static final Target CALENDARIO = Target.the("icono Calendario")
-        .locatedBy("//i[@class='oxd-icon bi-calendar oxd-date-input-icon']");
-    public static final Target SELECCIONAR_DIA = Target.the("selecciona dia")
-        .locatedBy("//div[@class='oxd-calendar-date --selected --today']");
-    public static final Target TIEMPO = Target.the("icono tiempo")
-        .locatedBy("//i[@class='oxd-icon bi-clock oxd-time-input--clock']");
-    public static final Target VALIDAR_CONTRATO = Target.the("boton contratar")
-        .locatedBy("(//div[@class='orangehrm-container']//div[normalize-space()='{0}']/following-sibling::div[normalize-space()='Hired'])[1]");
+    public static final Target INPUT = Target.the("inputs").
+        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group']//input[@placeholder='{1}']");
+
+    public static final Target SEPARATE_INPUT = Target.the("inputs separados").
+        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//input[@placeholder='{1}']");
+
+    public static final Target TEXT_AREA = Target.the("inputs text area").
+        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//textarea[@placeholder='{1}']");
+
+    public static final Target INPUT_LIST = Target.the("Click Select input").
+        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-select-text-input']");
+
+    public static final Target SELECT = Target.the("select list element").
+        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='{1}']");
+
+    public static final Target UPLOAD_FILE = Target.the("input subir el archivo").
+        locatedBy("//input[@type='file']");
+
+    public static final Target CHECK = Target.the("checkbox").
+        locatedBy("//div[@class='oxd-checkbox-wrapper']//span");
 }
