@@ -21,8 +21,8 @@ public class InputsReclutamiento {
         locatedBy("//div[@class='oxd-select-text-input']");
 
     public static final Target SELECCION_VACANTE =
-        Target.the("Opción de Rol").
-        locatedBy("//label[normalize-space()='Vacancy']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='Payroll Administrator']");
+        Target.the("Selección rol de vacante").
+        locatedBy("//label[normalize-space()='Vacancy']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='Senior QA Lead']");
 
     public static final Target CORREO_INPUT =
         Target.the("Input correo").
@@ -53,7 +53,7 @@ public class InputsReclutamiento {
         locatedBy("//button[normalize-space()='Save']");
 
     public static final Target BOTON_SHORTLIST=
-        Target.the("Boton para guardar").
+        Target.the("Boton para mostrar lista").
         locatedBy("//button[normalize-space()='Shortlist']");
 
 }

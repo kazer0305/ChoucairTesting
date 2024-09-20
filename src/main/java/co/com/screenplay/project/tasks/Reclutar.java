@@ -20,7 +20,7 @@ public class Reclutar implements Task {
     public Reclutar(Candidato candidato){
         this.candidato = candidato;
     }
-    
+
     @Override
     public<T extends Actor> void performAs(T actor) {
         actor.attemptsTo(ClickeaSobre.el(RECLUTAMIENTO_EN_MENU));

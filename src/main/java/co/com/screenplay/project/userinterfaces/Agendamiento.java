@@ -3,24 +3,54 @@ package co.com.screenplay.project.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class Agendamiento {
-    public static final Target INPUT = Target.the("inputs").
-        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group']//input[@placeholder='{1}']");
 
-    public static final Target SEPARATE_INPUT = Target.the("inputs separados").
-        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//input[@placeholder='{1}']");
+    public static final Target BOTON_AGENDAMIENTO =
+        Target.the("Boton para realizar agendamiento").
+        locatedBy("//button[normalize-space()='Schedule Interview']");
 
-    public static final Target TEXT_AREA = Target.the("inputs text area").
-        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-input-group oxd-input-field-bottom-space']//textarea[@placeholder='{1}']");
+    public static final Target TITULO_ENTREVISTA =
+        Target.the("Input para el nombre de la entrevista").
+        locatedBy("//*[text()='Interview Title']/parent::div/following-sibling::div/child::input");
 
-    public static final Target INPUT_LIST = Target.the("Click Select input").
-        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@class='oxd-select-text-input']");
+    public static final Target NOMBRE_ENTREVISTADOR =
+        Target.the("Input para el nombre del entrevistador").
+        locatedBy("//*[text()='Interviewer']/parent::div/following-sibling::div/descendant::input");
 
-    public static final Target SELECT = Target.the("select list element").
-        locatedBy("//label[normalize-space()='{0}']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='{1}']");
+    public static final Target SELECCION_PRIMER_ENTREVISTADOR =
+        Target.the("Selección del primer entrevistador disponible").
+        locatedBy("(//div[@role='listbox']//span)[1]");
 
-    public static final Target UPLOAD_FILE = Target.the("input subir el archivo").
-        locatedBy("//input[@type='file']");
+    public static final Target SELECCION_CALENDARIO =
+        Target.the("Abre el calendario").
+        locatedBy("//*[@class='oxd-date-input']/input");
 
-    public static final Target CHECK = Target.the("checkbox").
-        locatedBy("//div[@class='oxd-checkbox-wrapper']//span");
+    public static final Target SELECCION_DIA =
+        Target.the("Selecciona el día actual").
+        locatedBy("//div[@class='oxd-calendar-date --selected --today']");
+
+    public static final Target SELECCION_TIEMPO =
+        Target.the("Abre la opción Hora").
+        locatedBy("//*[text()='Time']/parent::div/following-sibling::div/descendant::input");
+
+    public static final Target MODIFICAR_HORA =
+        Target.the("Cambia la hora").
+        locatedBy("//*[@class='oxd-icon bi-chevron-up oxd-icon-button__icon oxd-time-hour-input-up']");
+
+    public static final Target MODIFICAR_MINUTOS_15 =
+        Target.the("Cambia 15 minutos").
+        locatedBy("//*[@class='oxd-icon bi-chevron-up oxd-icon-button__icon oxd-time-minute-input-up']");
+
+    public static final Target BOTON_APROBADO =
+        Target.the("Boton para aprobar").
+        locatedBy("//button[normalize-space()='Mark Interview Passed']");
+
+    public static final Target BOTON_OFERTA =
+        Target.the("Boton para ofrecer plaza de trabajo").
+        locatedBy("//button[normalize-space()='Offer Job']");
+
+    public static final Target BOTON_CONTRATAR =
+        Target.the("Boton para ofrecer plaza de trabajo").
+        locatedBy("//button[normalize-space()='Hire']");
+
+
 }

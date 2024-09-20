@@ -1,6 +1,7 @@
 package co.com.screenplay.project.stepdefinitions;
 
 import co.com.screenplay.project.models.Candidato;
+import co.com.screenplay.project.tasks.AgendarEntrevista;
 import co.com.screenplay.project.tasks.Reclutar;
 import io.cucumber.java.Before;
 import io.cucumber.java.an.Y;
@@ -27,7 +28,7 @@ public class ContratarCandidatoStep {
     @Y("este se le agrega la informacion en la seccion notas")
     public void esteSeLeAgregaLaInformacionEnLaSeccionNotas(){
         theActorInTheSpotlight().attemptsTo(
-
+            AgendarEntrevista.paraUnCandidato()
         );
     }
 
