@@ -22,7 +22,7 @@ public class InputsReclutamiento {
 
     public static final Target SELECCION_VACANTE =
         Target.the("Selección rol de vacante").
-        locatedBy("//label[normalize-space()='Vacancy']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='Senior QA Lead']");
+        locatedBy("//label[normalize-space()='Vacancy']/ancestor::div[@class='oxd-grid-item oxd-grid-item--gutters']//div[@role='listbox']//span[normalize-space()='Payroll Administrator']");
 
     public static final Target CORREO_INPUT =
         Target.the("Input correo").
