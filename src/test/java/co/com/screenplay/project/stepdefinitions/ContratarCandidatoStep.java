@@ -9,6 +9,7 @@ import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class ContratarCandidatoStep {
@@ -34,7 +35,7 @@ public class ContratarCandidatoStep {
 
     @Entonces("el candidato es ingresado en plantilla")
     public void elCandidatoEsIngresadoEnPlantilla(){
-        theActorInTheSpotlight().attemptsTo();
+        theActorInTheSpotlight().should();
     }
 
 }
