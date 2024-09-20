@@ -1,6 +1,7 @@
 package co.com.screenplay.project.stepdefinitions;
 
 import co.com.screenplay.project.models.Candidato;
+import co.com.screenplay.project.questions.EstaVisible;
 import co.com.screenplay.project.tasks.AgendarEntrevista;
 import co.com.screenplay.project.tasks.Reclutar;
 import io.cucumber.java.Before;
@@ -8,7 +9,9 @@ import io.cucumber.java.an.Y;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import org.hamcrest.Matchers;
 
+import static co.com.screenplay.project.userinterfaces.InputsReclutamiento.VALIDAR_CONTRATACION;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -35,7 +38,10 @@ public class ContratarCandidatoStep {
 
     @Entonces("el candidato es ingresado en plantilla")
     public void elCandidatoEsIngresadoEnPlantilla(){
-        theActorInTheSpotlight().should();
+        theActorInTheSpotlight().should(
+            seeThat(EstaVisible.elObjetivo(VALIDAR_CONTRATACION),
+            Matchers.is(true))
+        );
     }
 
 }

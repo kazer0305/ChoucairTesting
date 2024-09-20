@@ -56,4 +56,8 @@ public class InputsReclutamiento {
         Target.the("Boton para mostrar lista").
         locatedBy("//button[normalize-space()='Shortlist']");
 
+    public static final Target VALIDAR_CONTRATACION =
+        Target.the("Busca la contratación").
+        locatedBy("//*[text()='Alejandro Araque Marin']/parent::div/parent::div//descendant::div[text()='Hired']");
+
 }
